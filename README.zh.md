@@ -105,7 +105,7 @@ media-player-for-uos/
 1. **克隆项目**
 
 ```bash
-git clone https://github.com/owoxinyu/media-player-for-uos.git
+git clone https://github.com/xinyuguo1014/media-player-for-uos.git
 cd media-player-for-uos
 ```
 
