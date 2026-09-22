@@ -1,154 +1,156 @@
 # Media Player for UOS
 
-一个基于 Qt 框架开发的智能多媒体播放器，专为 UOS（统信操作系统）设计。
+English | [中文](README.zh.md)
 
-## 项目概述
+A modern multimedia player built with the Qt framework, designed specifically for UOS (UnionTech OS).
 
-Media Player for UOS 是一个功能丰富的多媒体播放器，具有以下核心特性：
+## Project Overview
 
-- **多媒体播放**：支持音频和视频文件的播放
-- **智能推荐**：基于机器学习的音乐推荐系统
-- **现代化 UI**：支持浅色、深色、跟随系统主题切换
-- **播放列表管理**：完整的播放列表功能
-- **快捷键支持**：可自定义的快捷键设置
+Media Player for UOS is a feature-rich multimedia player with the following core features:
 
-### 核心播放功能
+- **Multimedia Playback**: Supports audio and video playback
+- **Intelligent Recommendations**: A machine learning-based music recommendation system
+- **Modern UI**: Supports light, dark, and system themes
+- **Playlist Management**: Full playlist functionality
+- **Keyboard Shortcuts**: Customizable keyboard shortcut settings
 
-- 正常在 UOS 系统运行
-- 支持常见的音频视频格式：mp3、wav、mp4、avi、mkv 等格式的播放
-- 支持音量调节
-- 支持进度条显示和进度调整
-- 支持倍速播放，倍速播放时音视频需同步
-- 支持历史播放列表和搜索功能
-- 主题切换（浅色、深色、跟随系统）
-- 默认播放模式设置（顺序播放、随机播放、单个播放、单个循环、列表循环）
-- 快捷键设置（默认或自定义设置）
+### Core Playback Features
 
-### 音乐推荐系统
+- Runs on UOS
+- Supports common audio and video formats, including MP3, WAV, MP4, AVI, and MKV
+- Volume adjustment
+- Playback progress display and seeking
+- Variable-speed playback, with audio and video synchronization required at different speeds
+- Playback history and search
+- Theme switching (light, dark, and system)
+- Default playback mode settings (sequential, shuffle, play once, repeat one, and repeat all)
+- Default and customizable keyboard shortcuts
 
-- 结合歌曲音频特征与用户播放行为进行推荐
-- 融合 K-Means 聚类、自动编码器和协同过滤算法
-- 生成个性化音乐推荐列表
+### Music Recommendation System
 
-### 用户界面
+- Combines song audio features with user playback behavior to generate recommendations
+- Integrates K-Means clustering, autoencoders, and collaborative filtering algorithms
+- Generates personalized music recommendation lists
 
-- 支持窗口大小调整
-- 浅色、深色、跟随系统主题切换
-- 播放控制栏
-- 播放列表面板
-- 设置面板
-- 情感分析界面
+### User Interface
 
-## 项目结构
+- Resizable window
+- Light, dark, and system themes
+- Playback control bar
+- Playlist panel
+- Settings panel
+- Emotion analysis interface
+
+## Project Structure
 
 ```text
 media-player-for-uos/
-├── CMakeLists.txt                  # 项目构建配置
-├── README.md                       # 项目说明文档
-├── src/                            # 播放器源代码
-│   ├── main.cpp                    # 程序入口
-│   ├── mainwindow.[cpp/h/ui]       # 主窗口类
-│   ├── playbar.[cpp/h/ui]          # 播放控制栏
-│   ├── playlist.[cpp/h/ui]         # 播放列表
-│   ├── setting.[cpp/h/ui]          # 设置面板
-│   └── modelchat.[cpp/h/ui]        # 模型交互界面
-├── resources/                      # 应用资源文件
-│   ├── qss/                        # 样式表文件
-│   └── images/                     # 图标资源
+├── CMakeLists.txt                  # Project build configuration
+├── README.md                       # Project documentation
+├── src/                            # Player source code
+│   ├── main.cpp                    # Application entry point
+│   ├── mainwindow.[cpp/h/ui]       # Main window class
+│   ├── playbar.[cpp/h/ui]          # Playback control bar
+│   ├── playlist.[cpp/h/ui]         # Playlist
+│   ├── setting.[cpp/h/ui]          # Settings panel
+│   └── modelchat.[cpp/h/ui]        # Model interaction interface
+├── resources/                      # Application resources
+│   ├── qss/                        # Stylesheets
+│   └── images/                     # Icon assets
 ├── modules/
-│   └── music_recommendation/       # 音乐推荐模块
-│       ├── recommender.py          # 主推荐算法
-│       ├── requirements.txt        # Python 依赖
-│       └── *.csv                   # 数据集
+│   └── music_recommendation/       # Music recommendation module
+│       ├── recommender.py          # Main recommendation algorithm
+│       ├── requirements.txt        # Python dependencies
+│       └── *.csv                   # Datasets
 ├── packaging/
-│   └── linux/                      # 桌面入口配置
-└── scripts/                        # UOS 部署脚本
+│   └── linux/                      # Desktop entry configuration
+└── scripts/                        # UOS deployment scripts
 ```
 
-## 技术栈
+## Technology Stack
 
-### 前端技术
+### Frontend Technologies
 
-- **Qt 6.7.2**：跨平台应用框架
-- **C++17**：主要编程语言
-- **Qt Widgets**：用户界面框架
-- **Qt Multimedia**：多媒体播放框架
-- **Qt WebSockets**：网络通信组件
-- **QSS**：Qt 样式表
-- **CMake**：项目构建工具
+- **Qt 6.7.2**: Cross-platform application framework
+- **C++17**: Primary programming language
+- **Qt Widgets**: User interface framework
+- **Qt Multimedia**: Multimedia playback framework
+- **Qt WebSockets**: Network communication component
+- **QSS**: Qt stylesheets
+- **CMake**: Project build tool
 
-### 后端技术
+### Backend Technologies
 
-- **Python 3.8+**：推荐算法实现
-- **TensorFlow / Keras**：深度学习框架
-- **scikit-learn**：机器学习库
-- **pandas / NumPy**：数据处理库
-- **FFmpeg**：多媒体处理工具
+- **Python 3.8+**: Recommendation algorithm implementation
+- **TensorFlow / Keras**: Deep learning framework
+- **scikit-learn**: Machine learning library
+- **pandas / NumPy**: Data processing libraries
+- **FFmpeg**: Multimedia processing tool
 
-## 安装与部署
+## Installation and Deployment
 
-1. 在 Release 中下载并解压源码包
-2. 执行 `scripts/configure-uos.sh`
-3. 执行 `scripts/install-uos.sh` 完成构建和安装
+1. Download and extract the source archive from Releases
+2. Run `scripts/configure-uos.sh`
+3. Run `scripts/install-uos.sh` to build and install the application
 
-### 前置要求
+### Prerequisites
 
-- UOS 操作系统或兼容的 Linux 发行版
-- Qt 6 开发环境
+- UOS or a compatible Linux distribution
+- Qt 6 development environment
 - Python 3.8+
 - FFmpeg
 
-### 编译安装
+### Build and Install
 
-1. **克隆项目**
+1. **Clone the repository**
 
 ```bash
 git clone https://github.com/owoxinyu/media-player-for-uos.git
 cd media-player-for-uos
 ```
 
-2. **配置项目**
+2. **Configure the project**
 
 ```bash
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 ```
 
-3. **编译项目**
+3. **Build the project**
 
 ```bash
 cmake --build build --parallel
 ```
 
-4. **安装**
+4. **Install**
 
 ```bash
 sudo cmake --install build
 ```
 
-### Python 依赖安装
+### Install Python Dependencies
 
 ```bash
 cd modules/music_recommendation
 pip install -r requirements.txt
 ```
 
-## 使用方法
+## Usage
 
-### 启动播放器
+### Launch the Player
 
 ```bash
 media-player-for-uos
 ```
 
-### 基本操作
+### Basic Controls
 
-- **播放/暂停**：空格键或播放按钮
-- **音量调节**：鼠标滚轮或滑块控制
-- **切换歌曲**：上一曲/下一曲按钮
-- **主题切换**：设置面板中选择主题
+- **Play / Pause**: Press Space or use the playback button
+- **Volume**: Use the mouse wheel or volume slider
+- **Switch Tracks**: Use the previous / next track buttons
+- **Switch Themes**: Select a theme in the settings panel
 
-### 音乐推荐
+### Music Recommendations
 
-1. 在播放列表中右键歌曲
-2. 选择“推荐相似歌曲”
-3. 系统会基于当前歌曲推荐相似音乐
+1. Right-click a song in the playlist
+2. Select “Recommend Similar Songs”
+3. The system will recommend similar music based on the current song
